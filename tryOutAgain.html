@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+
+		<title>The Acting Portfolio for Jackie Chasten</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<!-- Bootstrap -->
+		<link href="_include/css/bootstrap.min.css" rel="stylesheet">
+
+		<!--Supersized-->
+		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		
+		<script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
+		<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+		
+		<script type="text/javascript">
+			
+			jQuery(function($){
+				
+				$.supersized({
+				
+					// Functionality
+					slide_interval          :   12000,		// Length between transitions
+					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+					transition_speed		:	1000,		// Speed of transition
+															   
+					// Components
+					fit_always				:	1,						
+					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+					slides 					:  	[			// Slideshow Images
+														{image : 'http://49.media.tumblr.com/649b7a30d661883f5f85d6be4df80ef0/tumblr_npnia5J84x1si6zu4o1_500.gif', title : 'Headshots for Drama (Headshot Collection)', thumb : 'http://49.media.tumblr.com/649b7a30d661883f5f85d6be4df80ef0/tumblr_npnia5J84x1si6zu4o1_500.gif', url : 'headshotsDrama.html'},
+
+														{image : 'http://41.media.tumblr.com/4bba2f0b8d08b90cd25a359fefe9fa1a/tumblr_nm3pxwVgfy1si6zu4o1_1280.jpg', title : 'Candids from the Spring (Photoshoot)', thumb : 'http://41.media.tumblr.com/4bba2f0b8d08b90cd25a359fefe9fa1a/tumblr_nm3pxwVgfy1si6zu4o1_1280.jpg', url : 'candidsSpring.html'},  
+
+														{image : '_include/img/slider-images/in their element.png', title : 'In Their Element (Experimental Short Film)', thumb : '_include/img/slider-images/in their element.png', url : 'InTheirElement.html'},
+
+														{image : '_include/img/slider-images/No Reason to Stop.png', title : 'No Reason To Stop Going (Motion Capture Dancing)', thumb : '_include/img/slider-images/No Reason to Stop.png', url : 'NoReasonToStop.html'},
+
+														{image : '_include/img/slider-images/Text Is Speech (play).png', title : 'Text Is Speech (One Act Play)', thumb : '_include/img/slider-images/Text Is Speech (play).png', url : 'TextIsSpeech.html'},
+
+														{image : '_include/img/slider-images/candid2.jpg', title : 'Rutgers Theatre Club (Rutgers University Collaboration Photoshoot)', thumb : '_include/img/slider-images/candid2.jpg', url : 'candid2.html'},
+
+														{image : '_include/img/slider-images/headshots 2.JPG', title : 'Headshots for Film (Headshot Collection)', thumb : '_include/img/slider-images/headshots 2.JPG', url : 'headshot2.html'},
+
+														{image : '_include/img/slider-images/The Fill.png', title : 'The Fill and The Fall (Video Art Installation)', thumb : '_include/img/slider-images/The Fill.png', url : 'theFall.html'},
+
+														{image : '_include/img/slider-images/wait for a minute.png', title : 'Wait For A Minute (Music Video for TuneYards)', thumb : '_include/img/slider-images/wait for a minute.png', url : 'WairFor.html/'}
+
+												]
+					
+				});
+		    });
+		    
+		</script>
+		
+	</head>
+	
+	<style type="text/css">
+		ul#demo-block{ margin:0 15px 15px 15px; }
+			ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:#616789; font:11px Helvetica, Arial, sans-serif; }
+			ul#demo-block li a{ color:#eee; font-weight:bold; }
+	</style>
+
+<body>
+
+	<!--Caption under Title-->
+	
+	<ul id="demo-block">
+		<li><a href="tryOutAgain.html" target="_blank"><img src="img/supersized-logo.png"/></a></li>
+		<li>Featuring the collaborative works of: <a href="http://www.mahedewan.com" target="_blank">Mahe N Dewan</a>, <a href="http://nyfa.edu" target="_blank">Ricardo Biramontes</a>, <a href="vimeo.com/indiraardolic" target="_blank">Indira Ardolic</a>,&amp; <a href="http://laja.me/" target="_blank">Lajune McMillian</a></li>
+	</ul>
+	
+	<!--End of styles-->
+
+	<!--Thumbnail Navigation-->
+	<div id="prevthumb"></div>
+	<div id="nextthumb"></div>
+	
+	<!--Arrow Navigation-->
+	<a id="prevslide" class="load-item"></a>
+	<a id="nextslide" class="load-item"></a>
+	
+	<div id="thumb-tray" class="load-item">
+		<div id="thumb-back"></div>
+		<div id="thumb-forward"></div>
+	</div>
+	
+	<!--Time Bar-->
+	<div id="progress-back" class="load-item">
+		<div id="progress-bar"></div>
+	</div>
+	
+	<!--Control Bar-->
+	<div id="controls-wrapper" class="load-item">
+		<div id="controls">
+			
+			<a id="play-button"><img id="pauseplay" src="img/pause.png"/></a>
+		
+			<!--Slide counter-->
+			<div id="slidecounter">
+				<span class="slidenumber"></span> / <span class="totalslides"></span>
+			</div>
+			
+			<!--Slide captions displayed here-->
+			<div id="slidecaption"></div>
+			
+			<!--Thumb Tray button-->
+			<a id="tray-button"><img id="tray-arrow" src="img/button-tray-up.png"/></a>
+			
+			<!--Navigation-->
+			<ul id="slide-list"></ul>
+			
+		</div>
+	</div>
+
+</body>
+</html>
