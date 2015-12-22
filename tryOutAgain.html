@@ -10,14 +10,25 @@
 		<link href="_include/css/bootstrap.min.css" rel="stylesheet">
 
 		<!--Supersized-->
-		<link rel="stylesheet" href="css/supersized.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="theme/supersized.shutter.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="_include/css/supersized.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="_include/theme/supersized.shutter.css" type="text/css" media="screen" />
+		<link rel="stylesheet" type="text/css" media="all" href="_include/css/reset.css" />
+		
+		<link rel="stylesheet" type="text/css" media="all" href="_include/css/trunk.css" />
+
+		<!-- Scripts --> 
+		<script type="text/javascript">
+			if (typeof jQuery == 'undefined')
+				document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + 
+																	"type='text/javascript'%3E%3C/script%3E"))
+		</script>
+		<script type="text/javascript" language="javascript" src="_include/js/trunk.js"></script>
 		
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="_include/js/jquery.easing.min.js"></script>
 		
-		<script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
-		<script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
+		<script type="text/javascript" src="_include/js/supersized.3.2.7.min.js"></script>
+		<script type="text/javascript" src="_include/theme/supersized.shutter.min.js"></script>
 		
 		<script type="text/javascript">
 			
@@ -60,64 +71,82 @@
 		</script>
 		
 	</head>
-	
-	<style type="text/css">
-		ul#demo-block{ margin:0 15px 15px 15px; }
-			ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:#616789; font:11px Helvetica, Arial, sans-serif; }
-			ul#demo-block li a{ color:#eee; font-weight:bold; }
-	</style>
+	<body>
+		<div class="container">
 
-<body>
+		<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+				<li></li><li></li><li></li>
+			</ul>
+			<h1>Jackie Alexis Chasten</h1>
+		</header>
 
-	<!--Caption under Title-->
-	
-	<ul id="demo-block">
-		<li><a href="tryOutAgain.html" target="_blank"><img src="img/supersized-logo.png"/></a></li>
-		<li>Featuring the collaborative works of: <a href="http://www.mahedewan.com" target="_blank">Mahe N Dewan</a>, <a href="http://nyfa.edu" target="_blank">Ricardo Biramontes</a>, <a href="vimeo.com/indiraardolic" target="_blank">Indira Ardolic</a>,&amp; <a href="http://laja.me/" target="_blank">Lajune McMillian</a></li>
-	</ul>
-	
-	<!--End of styles-->
-
-	<!--Thumbnail Navigation-->
-	<div id="prevthumb"></div>
-	<div id="nextthumb"></div>
-	
-	<!--Arrow Navigation-->
-	<a id="prevslide" class="load-item"></a>
-	<a id="nextslide" class="load-item"></a>
-	
-	<div id="thumb-tray" class="load-item">
-		<div id="thumb-back"></div>
-		<div id="thumb-forward"></div>
-	</div>
-	
-	<!--Time Bar-->
-	<div id="progress-back" class="load-item">
-		<div id="progress-bar"></div>
-	</div>
-	
-	<!--Control Bar-->
-	<div id="controls-wrapper" class="load-item">
-		<div id="controls">
-			
-			<a id="play-button"><img id="pauseplay" src="img/pause.png"/></a>
-		
-			<!--Slide counter-->
-			<div id="slidecounter">
-				<span class="slidenumber"></span> / <span class="totalslides"></span>
-			</div>
-			
-			<!--Slide captions displayed here-->
-			<div id="slidecaption"></div>
-			
-			<!--Thumb Tray button-->
-			<a id="tray-button"><img id="tray-arrow" src="img/button-tray-up.png"/></a>
-			
-			<!--Navigation-->
-			<ul id="slide-list"></ul>
-			
+		<nav class="slide">
+			<ul>
+				<li><a href="tryOutAgain.html" class="active">Home</a></li>
+				<li><a href="#">Contact</a></li>
+				</ul>
+		</nav>
 		</div>
-	</div>
 
-</body>
+		<style type="text/css">
+			ul#demo-block{ margin:0 15px 15px 15px; }
+				ul#demo-block li{ margin:0 0 10px 0; padding:10px; display:inline; float:left; clear:both; color:#aaa; background:#616789; font:11px Helvetica, Arial, sans-serif; }
+				ul#demo-block li a{ color:#eee; font-weight:bold; }
+		</style>
+
+		<!--Caption under Title-->
+		
+		<ul id="demo-block">
+		<div>
+		<p> </p>
+		</div>
+
+			<li>Featuring the collaborative works of: <a href="http://www.mahedewan.com" target="_blank">Mahe N Dewan</a>, <a href="http://nyfa.edu" target="_blank">Ricardo Biramontes</a>, <a href="http://vimeo.com/user37014891" target="_blank">Indira Ardolic</a>,&amp; <a href="http://laja.me/" target="_blank">Lajune McMillian</a></li>
+		</ul>
+		
+		<!--End of styles-->
+
+		<!--Thumbnail Navigation-->
+		<div id="prevthumb"></div>
+		<div id="nextthumb"></div>
+		
+		<!--Arrow Navigation-->
+		<a id="prevslide" class="load-item"></a>
+		<a id="nextslide" class="load-item"></a>
+		
+		<div id="thumb-tray" class="load-item">
+			<div id="thumb-back"></div>
+			<div id="thumb-forward"></div>
+		</div>
+		
+		<!--Time Bar-->
+		<div id="progress-back" class="load-item">
+			<div id="progress-bar"></div>
+		</div>
+		
+		<!--Control Bar-->
+		<div id="controls-wrapper" class="load-item">
+			<div id="controls">
+				
+				<a id="play-button"><img id="pauseplay" src="_include/img/pause.png"/></a>
+			
+				<!--Slide counter-->
+				<div id="slidecounter">
+					<span class="slidenumber"></span> / <span class="totalslides"></span>
+				</div>
+				
+				<!--Slide captions displayed here-->
+				<div id="slidecaption"></div>
+				
+				<!--Thumb Tray button-->
+				<a id="tray-button"><img id="tray-arrow" src="_include/img/button-tray-up.png"/></a>
+				
+				<!--Navigation-->
+				<ul id="slide-list"></ul>
+				
+			</div>
+		</div>
+
+	</body>
 </html>
